@@ -1,0 +1,58 @@
+<html>
+<head>
+</head>
+<body>
+<?php
+	include"connect.php";
+	$mp_id=$_GET['mp_id'];
+	$qry="select * from admin WHERE id='".$id."'";
+	$result=mysql_query($qry);
+	while($row=mysql_fetch_assoc($result))
+	{
+	?>
+	<form action="updatemp1.php" method="POST">
+<table>
+<tr>
+
+<td>
+</td>
+<td>
+<input type="text" name="id" value="<?php echo $row['id'];?>"
+</td>
+</tr>
+<tr>
+<td>
+Name
+</td>
+<td>
+<input type="text" name="name" value="<?php echo $row['name'];?>">
+</td>
+</tr>
+<tr>
+<td>
+email
+</td>
+<td>
+<input type="email" name="email" value="<?php echo $row['email'];?>">
+</td>
+</tr>
+<tr>
+<td>
+password
+</td>
+<td>
+<input type="password" name="password" value="<?php echo $row['password'];?>">
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<input type="submit" value="ADD">
+</td>
+</tr>
+</table>
+</form>
+<?php
+	}	
+?>
+</body>
+</html>

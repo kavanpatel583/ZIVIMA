@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                padding:0px;
+                margin: 0px;
+            }
+            .nav a:hover
+            {
+                height: 100px;
+                color:#734631;
+                background: white;
+                font-size:40px;
+                font-family:calibri;
+                text-decoration:none;
+            }
+            .nav
+            {
+                clear: both;
+                padding:2%;
+                background:#734631;
+
+            }
+            .nav a
+            {
+                
+                color:white;
+                padding:10px;
+                font-size:30px;
+                font-family:calibri;
+                text-decoration:none;
+            }
+            .form
+            {
+                
+                margin-top:10%;
+            }
+            .form input{
+                height:30px;
+                width:200%;
+            }
+            .sign
+            {
+                color:white;
+                background:#11a286;
+            }
+            .head
+            {
+            }
+            .head img
+            {
+                    margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left:15%;; 
+                float: left;
+                height: 110px;
+                width: 110px;
+            }
+            textArea{
+                height:30px ;
+                width:200%  ;
+            }
+            .sagy{
+                float: right;
+                width:1000px;
+                margin-top:40px;
+                height: 100px;
+                height-line:100px;
+                color:#53b852;
+            }
+            body{
+                background:rgb(135,105,95);
+            }
+        </style>
+ </head>
+    <body>
+        <center>
+        <div class="head">
+            <img src="images/logo.jpg">
+            <marquee class="sagy"><h1>SANSAD ADARSH GRAM YOJNA</h1></marquee>
+            <nav class="nav">
+			    <a href="insert.html">Home</a> 
+            
+                <a href="adminselect.php">view admin</a> 
+                <a href="selectmp.php">view MPs</a>
+                <a href="nodalcrud.php">view Nodal officer</a>
+                <a href="feedback.php">manage feedback</a>
+                <a href="complain.php">view Complaint</a>
+                
+
+            </nav>
+        </div>
+      <div class="form">
+        <form action="login" method="POST">
+        <table>
+              <tr>
+                <td>
+                    <input type="text" name="name" placeholder="Name">                   
+                </td>
+            </tr>
+            <tr>
+				<td>
+					<input type="email" name="email" placeholder="email"> 
+				<td>
+			</tr>
+			<tr>
+				<td>
+					<input type="password" name="password" placeholder="password"> 
+				<td>
+			</tr>
+
+			<tr>
+                <td>
+                    <input type="submit" value="login">                   
+                </td>
+            </tr>
+        </table>
+</form>
+</div>
+</center>
+</body>
+</html>

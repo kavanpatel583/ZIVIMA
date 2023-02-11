@@ -1,0 +1,197 @@
+<html>
+	<head>
+		<title>ChartJS - BarGraph</title>
+		<style type="text/css">
+			#chart-container {
+				width: 640px;
+				height: auto;
+			}
+		</style>
+		<script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+	
+		<script>
+		$(document).ready(function(){
+		$.ajax({
+		url: "http://localhost/SAGYadmin/data1.php",
+		method: "GET",
+		success: function(data) {
+			console.log(data);
+			var player = [];
+			var score = [];
+
+			for(var i in data) {
+				player.push(data[i].name);
+				score.push(data[i].education_rate);
+			}
+
+			var chartdata = {
+				labels: player,
+				datasets : [
+					{
+						label: 'Education Rate (%)',
+						backgroundColor: 'rgba(200, 200, 200, 0.75)',
+						borderColor: 'rgba(200, 200, 200, 0.75)',
+						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+						hoverBorderColor: 'rgba(200, 200, 200, 1)',
+						data: score
+					}
+				]
+			};
+
+			var ctx = $("#mycanvas");
+
+			var barGraph = new Chart(ctx, {
+				type: 'bar',
+				data: chartdata
+			});
+		},
+		error: function(data) {
+			console.log(data);
+		}
+	});
+	$.ajax({
+		url: "http://localhost/SAGYadmin/data2.php",
+		method: "GET",
+		success: function(data) {
+			console.log(data);
+			var player = [];
+			var score = [];
+
+			for(var i in data) {
+				player.push(data[i].name);
+				score.push(data[i].access_to_cleanwater);
+			}
+
+			var chartdata = {
+				labels: player,
+				datasets : [
+					{
+						label: 'access_to_cleanwater  (%)',
+						backgroundColor: 'rgba(200, 200, 200, 0.75)',
+						borderColor: 'rgba(200, 200, 200, 0.75)',
+						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+						hoverBorderColor: 'rgba(200, 200, 200, 1)',
+						data: score
+					}
+				]
+			};
+
+			var ctx = $("#mycanvas1");
+
+			var barGraph = new Chart(ctx, {
+				type: 'bar',
+				data: chartdata
+			});
+		},
+		error: function(data) {
+			console.log(data);
+		}
+	});
+	$.ajax({
+		url: "http://localhost/SAGYadmin/data3.php",
+		method: "GET",
+		success: function(data) {
+			console.log(data);
+			var player = [];
+			var score = [];
+
+			for(var i in data) {
+				player.push(data[i].name);
+				score.push(data[i].access_to_electricity);
+			}
+
+			var chartdata = {
+				labels: player,
+				datasets : [
+					{
+						label: 'access_to_electricity  (%)',
+						backgroundColor: 'rgba(200, 200, 200, 0.75)',
+						borderColor: 'rgba(200, 200, 200, 0.75)',
+						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+						hoverBorderColor: 'rgba(200, 200, 200, 1)',
+						data: score
+					}
+				]
+			};
+
+			var ctx = $("#mycanvas2");
+
+			var barGraph = new Chart(ctx, {
+				type: 'bar',
+				data: chartdata
+			});
+		},
+		error: function(data) {
+			console.log(data);
+		}
+	});
+	$.ajax({
+		url: "http://localhost/SAGYadmin/data4.php",
+		method: "GET",
+		success: function(data) {
+			console.log(data);
+			var player = [];
+			var score = [];
+
+			for(var i in data) {
+				player.push(data[i].name);
+				score.push(data[i].education_rate);
+			}
+
+			var chartdata = {
+				labels: player,
+				datasets : [
+					{
+						label: 'Education Rate (%)',
+						backgroundColor: 'rgba(200, 200, 200, 0.75)',
+						borderColor: 'rgba(200, 200, 200, 0.75)',
+						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+						hoverBorderColor: 'rgba(200, 200, 200, 1)',
+						data: score
+					}
+				]
+			};
+
+			var ctx = $("#mycanvas3");
+
+			var barGraph = new Chart(ctx, {
+				type: 'bar',
+				data: chartdata
+			});
+		},
+		error: function(data) {
+			console.log(data);
+		}
+	});
+});
+		</script>
+	</head>
+	<body>
+		<div id="chart-container">
+			<canvas id="mycanvas"></canvas>
+		</div>
+
+		<div id="chart-container">
+			<canvas id="mycanvas1"></canvas>
+		</div>
+		<div id="chart-container">
+			<canvas id="mycanvas2"></canvas>
+		</div>
+		<div id="chart-container">
+			<canvas id="mycanvas3"></canvas>
+		</div>
+		<div id="chart-container">
+			<canvas id="mycanvas4"></canvas>
+		</div>
+		<div id="chart-container">
+			<canvas id="mycanvas5"></canvas>
+		</div>
+		
+		<!-- javascript -->
+		
+		<script type="text/javascript" src="Chart.min.js"></script>
+		
+	</body>
+</html>
